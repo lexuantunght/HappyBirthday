@@ -1,0 +1,33 @@
+.pw-lock {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pw-inp {
+    outline: none;
+    border: 1px solid #888;
+    box-sizing: border-box;
+    padding: 6px 8px;
+    border-radius: 8px;
+    &:focus {
+        border-color: #eee;
+    }
+}
+
+.pw-btn {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 6px 8px;
+    border-radius: 8px;
+    background-color: #eee;
+    color: black;
+    margin-top: 1rem;
+}
+
+.pw-err {
+    margin-top: 2rem;
+    color: red;
+}

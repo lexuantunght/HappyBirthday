@@ -1,0 +1,40 @@
+{
+  "name": "SecretBox",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "author": "LXTung",
+  "license": "ISC",
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-transition-group": "^4.4.5"
+  },
+  "devDependencies": {
+    "@types/react": "^17",
+    "@types/react-transition-group": "^4.4.10",
+    "@vitejs/plugin-react": "^4.2.1",
+    "sass": "^1.72.0",
+    "typescript": "^4.9.5",
+    "vite": "^4.5.3",
+    "vite-tsconfig-paths": "4.2.3"
+  }
+}
