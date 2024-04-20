@@ -3,9 +3,14 @@ import { AnimatedSwitching } from 'ui/animation/animated-switching';
 import PassLock from 'ui/pass-lock';
 import Render from 'ui/render';
 import Effects from 'ui/effects';
+import Sound from 'sound/sound-manager';
 
 const App = () => {
     const [stage, setStage] = React.useState(1);
+
+    React.useEffect(() => {
+        Sound.init();
+    }, []);
 
     return (
         <AnimatedSwitching classNames="anim-fade" identifier={stage}>

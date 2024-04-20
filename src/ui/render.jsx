@@ -1,6 +1,7 @@
 import React from 'react';
-import BirthDayGif from 'images/200.gif';
-import StarGif from 'images/star.gif';
+import Sound from 'sound/sound-manager';
+import BirthDayGif from 'static/images/200.gif';
+import StarGif from 'static/images/star.gif';
 
 const intro = `Hi Ngoc! Today is your birthday. \nI want to send a simple gift to you. Hope to see you happy in your day ^^ \n... \n... \n... \nLet's see it...`;
 
@@ -9,6 +10,7 @@ const Render = (props) => {
     const [showImg, setShowImg] = React.useState(false);
 
     React.useEffect(() => {
+        Sound.play();
         render(intro);
     }, []);
 
