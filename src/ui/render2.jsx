@@ -339,7 +339,7 @@ export default function Render(props) {
             <div className="four">
                 <div className="text-box">
                     <p className="hbd-chatbox">
-                        {`Chúc ${NAME} sinh nhật vui vẻ nha!! Chúc ${NAME} sang tuổi mới luôn mạnh khoẻ, có nhiều nhiềm vui và hạnh phúc, mãi xinh đẹp và mãi ở tuổi thanh xuân rực rỡ này. Và luôn vững bước vượt qua mọi khó khăn nữa.`}
+                        {`Chúc ${NAME} sinh nhật vui vẻ nha!! Chúc ${NAME} sang tuổi mới luôn mạnh khoẻ, có nhiều niềm vui và hạnh phúc, mãi xinh đẹp và mãi ở tuổi thanh xuân rực rỡ này. Và luôn vững bước vượt qua mọi khó khăn nữa.`}
                     </p>
                     <p className="fake-btn">{`Gửi ${NAME}`}</p>
                 </div>
