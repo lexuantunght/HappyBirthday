@@ -5,10 +5,10 @@ const PassLock = (props) => {
     const [err, setErr] = React.useState(false);
 
     const pass = React.useMemo(() => {
-        const d = '2' + '0';
+        const d = '1' + '7';
         const m = '0' + '4';
-        const y = '2' + '0' + '0' + '4';
-        return d + m + y;
+        const y = '2' + '0' + '0' + '3';
+        return import.meta.VITE_PUBLIC_PW || d + m + y;
     }, []);
 
     const onSubmit = (e) => {

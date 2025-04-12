@@ -3,7 +3,8 @@ import Sound from 'sound/sound-manager';
 import BirthDayGif from 'static/images/200.gif';
 import StarGif from 'static/images/star.gif';
 
-const intro = `Hi Ngoc! Today is your birthday. \nI want to send a simple gift to you. Hope to see you happy in your day ^^ \n... \n... \n... \nLet's see it...`;
+const NAME = process.env.VITE_PUBLIC_NAME || 'you';
+const intro = `Hi ${NAME}! Today is your birthday. \nI want to send a simple gift to you. Hope to see you happy in your day ^^ \n... \n... \n... \nLet's see it...`;
 
 const Render = (props) => {
     const [text, setText] = React.useState([]);

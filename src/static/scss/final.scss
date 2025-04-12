@@ -1,0 +1,17 @@
+.final {
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    &__txt {
+        font-size: 40px;
+    }
+    &__txt2 {
+        font-size: 28px;
+        margin-top: 24px;
+    }
+}

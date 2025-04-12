@@ -1,6 +1,6 @@
 import React from 'react';
 
-const render = (c) => {
+const render = (c, callback, repeat) => {
     var w = (c.width = window.innerWidth),
         h = (c.height = window.innerHeight),
         ctx = c.getContext('2d'),
@@ -332,7 +332,7 @@ const render = (c) => {
     }
 
     function anim() {
-        window.requestAnimationFrame(anim);
+        const handle = window.requestAnimationFrame(anim);
 
         ctx.fillStyle = '#111';
         ctx.fillRect(0, 0, w, h);
@@ -347,7 +347,17 @@ const render = (c) => {
 
         ctx.translate(-hw, -hh);
 
-        if (done) for (var l = 0; l < letters.length; ++l) letters[l].reset();
+        if (done) {
+            for (var l = 0; l < letters.length; ++l) letters[l].reset();
+            if (typeof repeat === 'number') {
+                if (repeat <= 0) {
+                    window.cancelAnimationFrame(handle);
+                    if (callback) callback();
+                } else {
+                    repeat -= 1;
+                }
+            }
+        }
     }
 
     for (var i = 0; i < opts.strings.length; ++i) {
@@ -379,12 +389,12 @@ const render = (c) => {
     });
 };
 
-const Effects = () => {
+const Effects = (props) => {
     const canvasRef = React.useRef(null);
 
     React.useEffect(() => {
         if (canvasRef.current) {
-            render(canvasRef.current);
+            render(canvasRef.current, props.onSuccess, 2);
         }
     }, []);
     return <canvas ref={canvasRef} id="effect" />;

@@ -3,16 +3,18 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-size: 14px;
 }
 
 .pw-inp {
     outline: none;
-    border: 1px solid #888;
+    border: 1px solid #eee;
     box-sizing: border-box;
     padding: 6px 8px;
     border-radius: 8px;
+    font-size: 15px;
     &:focus {
-        border-color: #eee;
+        border-color: #888;
     }
 }
 
@@ -25,6 +27,7 @@
     background-color: #eee;
     color: black;
     margin-top: 1rem;
+    font-size: 16px;
 }
 
 .pw-err {
