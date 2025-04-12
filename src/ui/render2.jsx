@@ -5,6 +5,7 @@ import Ballon3 from 'static/images/ballon3.svg';
 import Hat from 'static/images/hat.svg';
 import Irene from 'static/images/irene.jpg';
 import 'static/css/render2.css';
+import Sound from 'sound/sound-manager';
 
 const NAME = import.meta.env.VITE_PUBLIC_NAME || 'you';
 const AVATAR = import.meta.env.VITE_PUBLIC_AVATAR || Irene;
@@ -181,7 +182,10 @@ const animationTimeline = (callback) => {
                 ease: Expo.easeOut,
             },
             0.2,
-            '+=1.5'
+            '+=1.5',
+            () => {
+                Sound.play()
+            }
         )
         .staggerFromTo(
             '.baloons img',
@@ -352,7 +356,7 @@ export default function Render(props) {
                 <p className="idea-4">Bởi vì,</p>
                 <p className="idea-5">
                     {`${NAME} rất quan trọng trong ${ME}`}
-                    <span>❤️</span>
+                    <span>⭐</span>
                 </p>
                 <p className="idea-6">
                     <span>ĐÓ</span>
