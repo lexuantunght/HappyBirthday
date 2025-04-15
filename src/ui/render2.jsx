@@ -266,6 +266,7 @@ const animationTimeline = (callback) => {
                 scale: 80,
                 repeat: 3,
                 repeatDelay: 1.4,
+                zIndex: 0,
             },
             0.3
         )
