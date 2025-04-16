@@ -37,11 +37,11 @@ export default function Countdown(props) {
                 flexDirection: 'column',
                 alignItems: 'center',
                 justifyContent: 'center',
-                rowGap: 16,
+                rowGap: 24,
             }}>
             <span style={{ fontSize: 24 }}>Chưa tới lúc, vui lòng đợi :D</span>
             <span
-                style={{ fontSize: 64, fontWeight: 600, fontFamily: 'Arial' }}
+                style={{ fontSize: '10rem', fontWeight: 600, fontFamily: 'system-ui, Arial' }}
                 {...rest}
                 ref={displayRef}></span>
         </div>
